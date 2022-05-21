@@ -1,7 +1,13 @@
-@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+/* @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css); */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open Sans Condensed:300");
 @import url(//db.onlinewebfonts.com/c/c38f2cc711985becf7550d75271b1175?family=Neo+Sans+Pro);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-image: url(./assets/bg.png);
@@ -9,11 +15,18 @@ body {
   background-size: cover;
 }
 
-header {
-  background-image: url(./assets/stripes.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+
+h1 {
+  display: inline;
+  margin: 0;
+  font-size: 43px;
+  letter-spacing: -1px;
+  color: #cc0000;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Neo Sans Pro";
 }
+
 
 .headline {
   padding: 3em 0 0 1em;
@@ -22,6 +35,7 @@ header {
 
 .logo {
   display: flex;
+  align-items: center;
 }
 
 
@@ -53,27 +67,14 @@ header {
   filter: drop-shadow(-0.5px 0.866px 0px #ffffff);
 }
 
-#bitmap {
-  padding: 4em 0 0 6em;
-}
-
-#rolexin {
-  display: inline-block;
-  position: absolute;
-  vertical-align: bottom;
-  font-size: 43px;
-  letter-spacing: -1px;
-  color: #cc0000;
-  font-weight: 700;
-  font-style: italic;
-  font-family: "Neo Sans Pro";
-}
-
-#subtitle {
-  position: absolute;
-  vertical-align: bottom;
+.subtitle {
+  margin: 0;
   font-size: 12px;
   color: #677579;
   font-weight: 400;
   font-family: "Ubuntu Condensed";
+}
+
+#bitmap {
+  padding: 4em 0 0 6em;
 }
