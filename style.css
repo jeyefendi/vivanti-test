@@ -37,6 +37,14 @@ h2 {
   padding: 1em 0 0 3em;
 }
 
+.hide {
+  display: none;
+}
+
+.hovered {
+  background-color: rgb(0, 0, 0);
+}
+
 .headline {
   padding: 3em 0 0 1em;
   display: grid;
@@ -47,24 +55,6 @@ h2 {
   align-items: center;
 }
 
-.priority_selects {
-  font-size: 24px;
-  line-height: 29px;
-  color: #efeeef;
-  font-weight: 400;
-  font-family: "Ubuntu Condensed";
-  text-align: center;
-}
-
-.priority_numbers {
-  font-size: 39px;
-  line-height: 0px;
-  color: #b3b3b3;
-  font-weight: 700;
-  font-family: "Open Sans Condensed";
-  filter: drop-shadow(-0.5px 0.866px 0px #ffffff);
-}
-
 .subtitle {
   margin: 0;
   font-size: 12px;
@@ -73,24 +63,57 @@ h2 {
   font-family: "Ubuntu Condensed";
 }
 
-.red-tabs {
-  display: grid;
-  gap: 1em;
-  padding: 1em 0 0 8em;
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.tab-red {
+.red_tabs {
+  display: grid;
+  gap: 1em;
+  padding: 1em 0 0 7em;
+  list-style: none;
+  text-align: center;
+}
+
+.grey_tabs {
+  display: grid;
+  gap: 1em;
+  padding: 1em 0 0 3em;
+  list-style: none;
+  text-align: center;
+  min-width: 29%;  
+}
+
+.tab_red {
   font-size: 24px;
   font-family: "Ubuntu Condensed";
   color: rgb(239, 238, 239);  
-  background-color: #d30000;
+  background: radial-gradient(ellipse, #ff0000, #d50000);
   text-align: center;
   position: relative;
   padding: 1em 2em;
-  line-height: 150%;
-  max-width: 25%;
-  border-radius: 5%;
+  border-radius: 0.5em 0.5em;
+  min-height: 100%;
+  cursor: all-scroll;
 }
+
+.tab_grey {
+  font-size: 24px;
+  font-family: "Ubuntu Condensed";
+  color: #b3b3b3;  
+  background: radial-gradient(ellipse, #e4e4e4, #eaeaea);
+  text-align: center;
+  position: relative;
+  padding: 1em 2em;
+  border-radius: 0.5em 0.5em;
+  min-height: 100%;
+}
+
+.tab-red-long {
+  padding: 1em 1em;
+}
+
 
 #bitmap {
   padding: 2em 0 0 5em;

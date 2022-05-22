@@ -16,23 +16,36 @@
       </div>
     </header>
     <main>
-      <h2>Пожалуйста, расставьте свои приоритеты при выборе лекарственного средства:</h2>
-      <div class="red-tabs">
-        <div class="tab-red">
-          Эффективность
-        </div>
-        <div class="tab-red">
-          Безопасность
-        </div>
-        <div class="tab-red">
-          Удобство применения
-        </div>
-        <div class="tab-red">
-          Стоимость
-        </div>
+      <h2>
+        Пожалуйста, расставьте свои приоритеты при выборе лекарственного
+        средства:
+      </h2>
+      <div class="tabs">
+        <ul class="red_tabs">
+          <li class="tab_red js-cell">
+            <div class="js-card" draggable="true">Эффективность</div>
+          </li>
+          <li class="tab_red js-cell">
+            <div class="js-card" draggable="true">Безопасность</div>
+          </li>
+          <li class="tab_red js-cell tab-red-long">
+            <div class="js-card" draggable="true">Удобство&nbspприменения</div>
+          </li>
+          <li class="tab_red js-cell">
+            <div class="js-card" draggable="true">Стоимость</div>
+          </li>
+        </ul>
+        <ul class="grey_tabs">
+          <li class="tab_grey">1</li>
+          <li class="tab_grey">2</li>
+          <li class="tab_grey">3</li>
+          <li class="tab_grey">4</li>
+        </ul>
       </div>
+
       <img src="./assets/doctor.png" alt="Doctor" id="doctor" />
       <img src="./assets/brand.png" alt="Vivanti" id="vivanti-logo" />
     </main>
+    <script src="./script/drag.js"></script>
   </body>
 </html>
