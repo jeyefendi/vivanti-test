@@ -38,6 +38,7 @@ h2 {
   padding: 1em 0 0 3em;
 }
 
+
 .draggable.dragging {
   opacity: .5;
 }
@@ -73,7 +74,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-.red_tabs {
+.red_tabs.container {
   display: grid;
   gap: 1em;
   padding: 1em 0 0 7em;
@@ -81,7 +82,7 @@ h2 {
   text-align: center;
 }
 
-.grey_tabs {
+.grey_tabs.container {
   display: grid;
   gap: 1em;
   padding: 1em 0 0 3em;
@@ -90,7 +91,8 @@ h2 {
   min-width: 29%;  
 }
 
-.tab_red {
+
+.tab_red.draggable {
   font-size: 24px;
   font-family: "Ubuntu Condensed";
   color: rgb(239, 238, 239);  
