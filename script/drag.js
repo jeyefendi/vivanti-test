@@ -1,39 +1,39 @@
-const DragAndDrop = () => {
-    const card = document.querySelector('.js-card');
-    const cells = document.querySelectorAll('.js-cell');
+const draggables = document.querySelectorAll('.draggable')
+const containers = document.querySelectorAll('.container')
 
-    const dragStart = function () {
-        setTimeout(() => {
-        this.classList.add('hide');
-        }, 0)
-    };
-    const dragEnd = function () {
-        this.classList.remove('hide');
-    };
-    const dragOver = function (evt) {
-        evt.preventDefault();
-    };
-    const dragEnter = function (evt) {
-        evt.preventDefault();
-        this.classList.add('hovered');
-    };
-    const dragLeave = function () {
-        this.classList.remove('hovered');
-    };
-    const dragDrop = function () {
-        this.append(card)
-    };
-    
-    cells.forEach((cell) => {
-        cell.addEventListener('dragover', dragOver);
-        cell.addEventListener('dragenter', dragEnter);
-        cell.addEventListener('dragleave', dragLeave);
-        cell.addEventListener('drop', dragDrop);
-    });
+draggables.forEach(draggable => {
+  draggable.addEventListener('dragstart', () => {
+    draggable.classList.add('dragging')
+  })
 
-    cells.addEventListener('dragstart', dragStart);
-    cells.addEventListener('dragend', dragEnd);
+  draggable.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging')
+  })
+})
 
+containers.forEach(container => {
+  container.addEventListener('dragover', e => {
+    e.preventDefault()
+    const afterElement = getDragAfterElement(container, e.clientY)
+    const draggable = document.querySelector('.dragging')
+    if (afterElement == null) {
+      container.appendChild(draggable)
+    } else {
+      container.insertBefore(draggable, afterElement)
+    }
+  })
+})
 
-};
-DragAndDrop()
+function getDragAfterElement(container, y) {
+  const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
+
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect()
+    const offset = y - box.top - box.height / 2
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child }
+    } else {
+      return closest
+    }
+  }, { offset: Number.NEGATIVE_INFINITY }).element
+}
