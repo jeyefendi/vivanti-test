@@ -70,7 +70,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-.red_tabs.container {
+.red_tabs{
   display: grid;
   gap: 1em;
   padding: 1em 0 0 7em;
@@ -109,7 +109,7 @@ h2 {
   opacity: 0.1;
 }
 
-.tab_grey {
+.container {
   font-size: 24px;
   font-family: "Ubuntu Condensed";
   color: #b3b3b3;  
@@ -119,6 +119,10 @@ h2 {
   padding: 1em 2em;
   border-radius: 0.5em 0.5em;
   min-height: 100%;
+}
+
+.hide {
+  display: none;
 }
 
 
