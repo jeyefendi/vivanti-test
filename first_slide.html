@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>First Slide</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./script/drag.js"></script>
   </head>
   <body>
     <header>
@@ -28,16 +27,18 @@
           <p class="tab_red draggable tab-red-long" draggable="true">Удобство&nbspприменения</p>
           <p class="tab_red draggable" draggable="true">Стоимость</p>
         </div>
-        <div class="grey_tabs container">
-          <p class="tab_grey draggable" draggable="true">1</p>
-          <p class="tab_grey draggable" draggable="true">2</p>
-          <p class="tab_grey draggable" draggable="true">3</p>
-          <p class="tab_grey draggable" draggable="true">4</p>          
+        <div class="grey_tabs">
+          <div class="container tab_grey"><p>1</p></div>
+          <div class="container tab_grey"><p>2</p></div>
+          <div class="container tab_grey"><p>3</p></div>
+          <div class="container tab_grey"><p>4</p></div>
         </div>
       </div>
 
       <img src="./assets/doctor.png" alt="Doctor" id="doctor" />
       <img src="./assets/brand.png" alt="Vivanti" id="vivanti-logo" />
     </main>
+
+    <script src="./script/drag.js"></script>
   </body>
 </html>
