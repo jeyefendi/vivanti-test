@@ -60,6 +60,8 @@ h2 {
 .tabs {
   display: flex;
   flex-wrap: wrap;
+  width: 80vw;
+  gap: 2em;
 }
 
 .red_tabs{
@@ -74,10 +76,10 @@ h2 {
 .grey_tabs {
   display: grid;
   gap: 1em;
-  padding: 1em 0 0 5em;
+  padding: 1em 0 0 2em;
   list-style: none;
   text-align: center;
-  min-width: 25%;  
+  min-width: 35%;  
 }
 
 
@@ -92,7 +94,7 @@ h2 {
   background: radial-gradient(ellipse, #ff0000, #d50000);
   text-align: center;
   position: relative;
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   border-radius: 0.5em 0.5em;
   min-height: 100%;
   cursor: move;
